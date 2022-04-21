@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WikiHunt</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/wikipedia.css">
+    <link rel="stylesheet" href="assets/css/introjs.min.css">
+    <link rel="stylesheet" href="assets/css/wikihunt.css">
+</head>
+
+<body>
+
+    <!-- Contenu du menu de WikiHunt -->
+
+    <div class="header-hunt">
+        <div id="timer" class="header-item"
+            data-intro="Le timer qui se lancera au premier lien cliqué. Il comptera dans le score!" data-step="3">
+            00:00:00</div>
+        <div class="header-item" data-intro="Votre mot de départ, la page sur laquelle vous commencez." data-step="2">
+            <div class="large">Mot de départ : </div><span id="startingWord"></span>
+        </div>
+        <h2 class="title" class="header-item"
+            data-intro="Bienvenue dans WikiHunt !<br> Le but de ce jeu est simple : vous devez trouver la page Wikipédia du mot de fin en haut
+                à droite. <br> Pour cela, vous devez partir des liens de la page de départ et voyager de page en page.
+                <br> L'objectif est de trouver la page du mot de fin avec le moins de clic et le plus rapidement possible <br><br> Bonne Chasse !"
+            data-step="1"> WikiHunt</h2>
+        <div class="header-item" data-intro="Votre objectif, la page du mot à trouver" data-step="4">
+            <div class="large">Mot de fin : </div> <span id="endingWord"></span>
+        </div>
+        <div id="clickCounter" class="header-item"
+            data-intro="Le compteur du nombre de lien cliqués. Il comptera dans le score!" data-step="5">0</div>
+    </div>
+
+
+    <!-- Selecteur de difficuté -->
+
+    <div id="content">
+        
+        <div class="options">
+            <select id="difficulty"
+                data-intro="Reglez la difficulté que vous voulez et cliquez sur 'Commencer!' quand vous êtes prêt"
+                data-step="6">
+                <option value="easy">Facile - Page de début et de fin dans une seule sous-catégorie</option>
+                <option value="medium" selected>Moyen - Page de début et de fin dans deux sous-catégories d'une
+                    catégorie</option>
+                <option value="hard">Difficile - Page de début et de fin dans deux catégories différentes </option>
+                <option value="unfair">Injuste - Page de début et de fin dans tout Wikipedia</option>
+            </select>
+
+
+            <button id="startGame">Commencer!</button>
+
+        </div>
+    </div>
+    <footer>
+
+        <!-- Bouton de retour à la page précédente -->
+
+        <div id="tutoBack" data-intro="Le boutton de retour arrière vous permet de revenir d'une page en arrière!<br><br>
+            Seulement une fois par page cliquée, il est impossible de revenir en arrière de deux pages" data-step="7">
+            <button id="back">Retour vers la page précédente</button>
+        </div>
+
+        <!-- bouton de pause, lecteur et de musique suivante  -->
+
+        <div id="tutoMusic" data-intro="Vous pouvez mettre de la musique si vous le souhaitez" data-step="8">
+            <button id="music">Musique</button>
+            <button id="next">Suivant</button>
+        </div>
+    </footer>
+
+    <!-- source audio  -->
+
+    <audio id="audio">
+        <source src="" type="audio/wav">
+    </audio>
+
+    <!-- Scripts JS  -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/introjs.min.js"></script>
+    <script src="assets/js/wikihunt.js"></script>
+    <script src="assets/js/music.js"></script>
+</body>
+
+</html>

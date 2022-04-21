@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: blue;
+}
+
+a.ignored {
+    color: red !important;
+    text-decoration: none !important;
+}
+
+.header-hunt {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background: #7a2525;
+    color : rgba(255, 255, 255, 0.849);
+    height: 64px;
+    line-height: 64px;
+    padding: 0 50px;
+}
+
+.header-hunt a {
+    color : lightblue;
+}
+
+.header-hunt span {
+    font-weight: bold;
+}
+
+.header-hunt .title {
+    padding: 0;
+    margin: 0;
+    border: none;
+    color : rgba(255, 255, 255, 0.849);
+}
+
+#content {
+    margin: 20px 10px;
+}
+
+#welcome {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 50px;
+    text-align: center;
+
+    background: #ECECEC;
+}
+
+#win {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    width: 497px;
+    height: calc(12vh - -17px);
+    font-size: 30px;
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}   
+
+#difficulty {
+    width: calc(100% - 70px);
+    padding: 20px;
+    border: 1px solid #7a2525;
+    color: #7a2525;
+}
+
+#startGame {
+    width: 112px;
+    height: 25px;
+    border: 1px solid #7a2525;
+    background: #ECECEC;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 18px;
+}
+
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 104px);
+}
+
+.large {
+    display: none;
+}
+
+#tutoBack {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 300px;
+    height: 50px;
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}
+
+#back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 300px;
+    height: 50px;
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}
+
+#back:active{
+    background: #5a1d24;
+    color: #ECECEC;
+}
+
+
+
+#tutoMusic {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    height: 50px;
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}
+
+#music {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 217px;
+    height: 50px;
+    
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}   
+
+#music:active{
+    background: #5a1d24;
+    color: #ECECEC;
+}
+
+#next {
+    position: fixed;
+    bottom: 20px;
+    left: 237px;
+    width: 83px;
+    height: 50px;
+    background: #7a2525;
+    color: #ECECEC;
+
+    border: none;
+    outline: none;
+}
+
+#next:active{
+    background: #5a1d24;
+    color: #ECECEC;
+}
+
+@media only screen and (min-width: 960px) {
+
+    .large {
+        display: contents;
+    }
+
+}
